@@ -1,0 +1,8 @@
+web:
+  build: .
+  ports:
+    - '9000:9000'
+  working_dir: /usr/src/app
+  command: npm start
+  volumes:
+    - ./:/usr/src/app
