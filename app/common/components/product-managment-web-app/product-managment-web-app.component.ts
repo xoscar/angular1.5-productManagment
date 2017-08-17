@@ -1,5 +1,6 @@
 import '../productList/product-list.component.ts';
 import '../productDetail/product-detail.component.ts';
+import '../productAdd/product-add.component.ts';
 
 /**
  * Main Parent component of the Application
@@ -26,6 +27,14 @@ export namespace ProductManagment {
         path: '/products/:id',
         name: 'Product Detail',
         component: 'productDetail',
+      }, {
+        path: '/products/add',
+        name: 'Product Add',
+        component: 'productAdd',
+      }, {
+        path: '/products/update/:id',
+        name: 'Product Update',
+        component: 'productAdd',
       }],
     });
 }

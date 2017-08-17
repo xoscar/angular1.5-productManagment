@@ -26,6 +26,14 @@ export namespace ProductManagment {
     toggleImage() {
       this.showImage = !this.showImage;
     }
+
+    deleteProduct(id) {
+      this.productService.deleteProduct(id)
+
+      .then((products) => (
+        this.products = products
+      ))
+    }
   }
 
   angular.module('product-managment-web-app')

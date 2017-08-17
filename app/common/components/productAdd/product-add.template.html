@@ -1,0 +1,52 @@
+<div class="panel panel-primary">
+  <div class="panel-heading" style="font-size:large">
+    {{$ctrl.title}}
+  </div>
+  <div class="panel-body">
+    <div class="row">
+      <form ng-submit="$ctrl.addProduct()">
+        <div class="col-md-4 col-md-offset-2">
+          <div class="form-group">
+            <label for="productName">Name</label>
+            <input type="text" ng-model="$ctrl.productName" class="form-control" id="productName" placeholder="Enter name">
+          </div>
+          <div class="form-group">
+            <label class="sr-only" for="price">Price</label>
+            <div class="input-group">
+              <div class="input-group-addon">$</div>
+              <input type="text" ng-model="$ctrl.price" class="form-control" id="price" placeholder="Price">
+              <div class="input-group-addon">.00</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="imageUrl">imageUrl</label>
+            <input type="text" ng-model="$ctrl.imageUrl" class="form-control" id="imageUrl" placeholder="Enter image URL">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="productCode">Product Code</label>
+            <input type="text" ng-model="$ctrl.productCode" class="form-control" id="productCode" placeholder="Enter code">
+          </div>
+          <div class="form-group">
+            <label for="releaseDate">Release Date</label>
+            <input type="text" ng-model="$ctrl.releaseDate" class="form-control" id="releaseDate" placeholder="Enter release date">
+          </div>
+          <div class="form-group">
+            <label for="description">Description</label>
+            <textarea ng-model="$ctrl.description" class="form-control" id="description" placeholder="Enter description"></textarea>
+          </div>
+        </div>
+        <div class="col-md-offset-2 col-md-8 text-right">
+          <button type="submit" class="btn btn-primary">
+            {{$ctrl.productId ? "Update" : "Create"}}
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="panel-footer">
+    <a class="btn btn-default" ng-href="#products" style="width:80px">
+      < Back </a>
+  </div>
+</div>

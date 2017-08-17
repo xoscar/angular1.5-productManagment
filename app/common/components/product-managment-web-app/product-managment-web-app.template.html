@@ -1,10 +1,15 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
-    <div class="navbar-header">
+    <div class="navbar-header" style="width: 90%">
       <div class="navbar-brand">Product Management</div>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a ng-href="#products/add">Add Product</a>
+        </li>
+      </ul>
     </div>
   </div>
 </nav>
 <div class="container">
-	<ng-outlet></ng-outlet>
+  <ng-outlet></ng-outlet>
 </div>
